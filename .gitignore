@@ -8,3 +8,5 @@ venv
 .tox
 
 *.egg-info
+commands.txt
+build.sh
