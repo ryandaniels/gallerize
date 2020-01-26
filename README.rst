@@ -2,14 +2,8 @@
 gallerize
 =========
 
-Create a static HTML/CSS image gallery from a bunch of images.
-
-
-:Copyright: 2007-2015 Jochen Kupperschmidt
-:License: MIT, see LICENSE for details.
-:Version: 0.3.2
-:Date: 09-Aug-2015
-
+Create a static HTML/CSS image gallery from a bunch of images.  
+Can use fancybox (similar to lightbox) jQuery effect.  
 
 Features
 ========
@@ -18,7 +12,8 @@ Features
 - Generates clean, slim, semantically appropriate HTML5 and uses
   CSS 3 for styling.  As a result, the output can easily be themed.
 - Provides HTML access keys for keyboard navigation.
-
+- Can use fancybox (similar to lightbox) jQuery effect.
+- Optimize image to reduce size and remove meta info.
 
 Requirements
 ============
@@ -26,6 +21,7 @@ Requirements
 - Python_ 2.7+ or 3.3+
 - Jinja_ (tested with 2.7.1)
 - ImageMagick_ (tested with 6.6.9-7)
+- jpegoptim_ (tested with v1.4.4)
 
 
 Installation
@@ -34,11 +30,11 @@ Installation
 It is recommended to create a virtual environment and run gallerize
 inside it.
 
-To install ImageMagick_ and virtualenv_ on Debian/Ubuntu:
+To install ImageMagick_, jpegoptim_, and virtualenv_ on Debian/Ubuntu:
 
 .. code:: sh
 
-  $ aptitude install imagemagick python-virtualenv
+  $ aptitude install imagemagick python-virtualenv jpegoptim
 
 This should also give you a copy of pip_.
 
@@ -124,3 +120,21 @@ image captions, and image dimensions:
 .. _pip: http://www.pip-installer.org/
 .. _pytest: http://pytest.org/
 .. _tox: http://tox.testrun.org/
+.. _jpegoptim: https://github.com/tjko/jpegoptim/
+
+
+Credits / Thanks
+================
+
+:Name: Original Gallerize
+:Link: https://github.com/homeworkprod/gallerize
+:Copyright: 2007-2015 Jochen Kupperschmidt
+:License: MIT, see LICENSE for details.
+:Version: 0.3.2
+:Date: 09-Aug-2015
+
+------------
+
+:Name: Fancybox v3
+:Link: https://fancyapps.com/fancybox/3/
+:Copyright: fancybox is licensed under the GPLv3 license for all open source applications. 
